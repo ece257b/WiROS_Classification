@@ -1,0 +1,24 @@
+[36m--[0m Using CATKIN_DEVEL_PREFIX: /home/wcsng-robot/ipsn_ws/devel/.private/csi_tools
+[36m--[0m Using CMAKE_PREFIX_PATH: /home/wcsng-robot/ipsn_ws/devel;/home/wcsng-robot/wifi_ws/devel;/home/wcsng-robot/wifi_ws_private/devel;/home/wcsng-robot/wifi_ws_private/install;/home/wcsng-robot/workspace/cartographer_ws/install_isolated;/home/wcsng-robot/workspace/turtlebot2_noetic/devel;/opt/ros/noetic
+[36m--[0m This workspace overlays: /home/wcsng-robot/ipsn_ws/devel;/home/wcsng-robot/wifi_ws/devel;/home/wcsng-robot/wifi_ws_private/devel;/home/wcsng-robot/wifi_ws_private/install;/home/wcsng-robot/workspace/cartographer_ws/install_isolated;/home/wcsng-robot/workspace/turtlebot2_noetic/devel;/opt/ros/noetic
+[36m--[0m Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3")
+[36m--[0m Using PYTHON_EXECUTABLE: /usr/bin/python3
+[36m--[0m Using Debian Python package layout
+[36m--[0m Using empy: /usr/lib/python3/dist-packages/em.py
+[36m--[0m Using CATKIN_ENABLE_TESTING: ON
+[36m--[0m Call enable_testing()
+[36m--[0m Using CATKIN_TEST_RESULTS_DIR: /home/wcsng-robot/ipsn_ws/build/csi_tools/test_results
+[36m--[0m Forcing gtest/gmock from source, though one was otherwise available.
+[36m--[0m Found gtest sources under '/usr/src/googletest': gtests will be built
+[36m--[0m Found gmock sources under '/usr/src/googletest': gmock will be built
+[36m--[0m Found PythonInterp: /usr/bin/python3 (found version "3.8.10")
+[36m--[0m Using Python nosetests: /usr/bin/nosetests3
+[36m--[0m catkin 0.8.10
+[36m--[0m BUILD_SHARED_LIBS is on
+[36m--[0m Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+[36m--[0m csi_tools: 0 messages, 1 services
+[36m--[0m Installing devel-space wrapper /home/wcsng-robot/ipsn_ws/src/wiros_processing_node/scripts/aoa_node.py to /home/wcsng-robot/ipsn_ws/devel/.private/csi_tools/lib/csi_tools
+[36m--[0m Installing devel-space wrapper /home/wcsng-robot/ipsn_ws/src/wiros_processing_node/scripts/generate_static_compensation.py to /home/wcsng-robot/ipsn_ws/devel/.private/csi_tools/lib/csi_tools
+[36m--[0m Configuring done
+[36m--[0m Generating done
+[36m--[0m Build files have been written to: /home/wcsng-robot/ipsn_ws/build/csi_tools

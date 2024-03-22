@@ -1,0 +1,1 @@
+/home/wcsng-robot/ipsn_ws/devel/.private/csi_tools/share/gennodejs/ros/csi_tools/srv/_index.js

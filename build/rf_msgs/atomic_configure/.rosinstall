@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/wcsng-robot/ipsn_ws/devel/.private/rf_msgs/setup.sh

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+<launch>
+  <node pkg="wiros_csi_node" type="csi_node" name="csi_server" output="screen" clear_params="true" required="true">
+    
+    <!-- LOGIN DETAILS -->
+    <param name="asus_pwd"          type="string"       value="robot123!" /> <!-- password setup during Asus bringup-->
+	<param name="asus_host"        type="string"       value="wcsng"  />
+    <param name="asus_ip"           type="string"       value="192.168.43.226" />
+    
+    <!-- CHANNEL PARAMS -->
+    <!-- 'channel' should be a CONTROL (20 MHz) channel. Nexmon will set to the corresponding 40 or 80MHz channel appropriately. https://en.wikipedia.org/wiki/List_of_WLAN_channels -->
+    <param name="channel"           type="double"       value="157" />
+    <param name="bw"                type="double"       value="20" />
+    
+    <!-- PACKET PARAMS -->
+    <!-- <rosparam param="mac_filter"> "11:11:11:*:*:*" </rosparam> -->
+    <!-- <rosparam param="mac_filter"> "78:AF:08:F6:59:28" </rosparam> -->
+    <rosparam param="mac_filter"> "AC:37:43:DE:62:E7" </rosparam>
+    <!-- <rosparam param="mac_filter"> "42:50:C0:4A:0C:58" </rosparam> -->
+
+    <!-- beacon rate in ms; with mac address 11:11:11:
+                                            "first byte of hostname":true
+                                            "second byte of hostname":
+                                            "last byte of ip4"
+         if set to 0, then the AP does not transmit any packets -->
+    <param name="beacon_rate"       type="double"       value="0"   />
+    
+    <!-- SETUP PARAMS -->
+    <!-- Dump the packets locally on the asus then forward them over netcat.
+         This may affect packet latency, but needed for older systems which cannot receive the UDP broadcast -->
+    <param name="tcp_forward"       type="bool"         value="true"    />
+
+    <!-- Used to make the asus always listen to the nearest AP (will reduce your wifi connectivity somewhat since scanning needs to be done locally), see "Real-Time channel switching" in the README -->
+    <param name="lock_topic"        type="string"       value="PUBLISHTOPIC" />
+
+    <!-- Launch the node, but do not configure the router. useful for debug purposes. -->
+    <param name="no_config"         type="bool"         value="false"    />
+  </node>
+</launch>

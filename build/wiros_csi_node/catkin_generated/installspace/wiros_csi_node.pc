@@ -1,0 +1,8 @@
+prefix=/home/wcsng-robot/ipsn_ws/install
+
+Name: wiros_csi_node
+Description: Description of wiros_csi_node
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: std_msgs sensor_msgs roscpp rospy message_runtime rf_msgs

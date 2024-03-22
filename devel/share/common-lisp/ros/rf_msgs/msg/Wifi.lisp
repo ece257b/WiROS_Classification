@@ -1,0 +1,1 @@
+/home/wcsng-robot/ipsn_ws/devel/.private/rf_msgs/share/common-lisp/ros/rf_msgs/msg/Wifi.lisp

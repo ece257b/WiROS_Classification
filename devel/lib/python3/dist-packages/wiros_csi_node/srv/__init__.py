@@ -1,0 +1,1 @@
+/home/wcsng-robot/ipsn_ws/devel/.private/wiros_csi_node/lib/python3/dist-packages/wiros_csi_node/srv/__init__.py

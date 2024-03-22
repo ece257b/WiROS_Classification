@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -fopenmp  -O3 -DNDEBUG -ffast-math -fno-math-errno  -shared -Wl,-soname,libgtest_main.so -o ../lib/libgtest_main.so CMakeFiles/gtest_main.dir/src/gtest_main.cc.o  -Wl,-rpath,/home/wcsng-robot/ipsn_ws/build/wiros_csi_node/gtest/lib ../lib/libgtest.so -lpthread 

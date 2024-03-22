@@ -1,0 +1,8 @@
+prefix=/home/wcsng-robot/ipsn_ws/install
+
+Name: csi_tools
+Description: Description of csi_tools
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: std_msgs sensor_msgs roscpp rospy message_runtime rf_msgs

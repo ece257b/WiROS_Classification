@@ -1,0 +1,1 @@
+/home/wcsng-robot/ipsn_ws/devel/.private/csi_tools/lib/csi_tools/generate_static_compensation.py

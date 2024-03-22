@@ -1,0 +1,1 @@
+/home/wcsng-robot/ipsn_ws/devel/.private/wiros_csi_node/share/wiros_csi_node/cmake/wiros_csi_node-msg-extras.cmake

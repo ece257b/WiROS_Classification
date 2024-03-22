@@ -1,0 +1,7 @@
+set(csi_tools_SETUP_PY_SETUP_MODULE "setuptools")
+set(csi_tools_SETUP_PY_VERSION "0.0.0")
+set(csi_tools_SETUP_PY_SCRIPTS "")
+set(csi_tools_SETUP_PY_PACKAGES "csi_utils")
+set(csi_tools_SETUP_PY_PACKAGE_DIRS "src/csi_utils")
+set(csi_tools_SETUP_PY_MODULES "")
+set(csi_tools_SETUP_PY_MODULE_DIRS "")
