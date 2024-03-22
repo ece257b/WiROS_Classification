@@ -1,5 +1,6 @@
 close all;
 
+%% Imports profiles, change filepaths for sw5 vs sw20
 prof_all = [];
 load('data/data319_fft_fah1_sw5/ac_37_43_de_62_e7-157-20.mat'); 
 prof_all = [prof_all;prof];
@@ -16,7 +17,8 @@ labels = labels(~isnan(labels));
 data_len = size(prof_all,1);
 threshold_value = 0.55;
 threshold_value2 = 0.08;
-% Define the CNN architecture
+
+%% Define the CNN architecture
 layers = [
     imageInputLayer(input_size)
     
@@ -113,7 +115,7 @@ test_data = reshape(test_data, [input_size,  length(test_indices)]);
 train_labels = categorical(labels(train_indices));
 test_labels = categorical(labels(test_indices));
 
-% Specify training options
+%% Specify training options
 options = trainingOptions('adam', ...
     'MaxEpochs', 10, ...
     'MiniBatchSize', 32, ...
@@ -122,7 +124,7 @@ options = trainingOptions('adam', ...
 % Train the CNN
 net = trainNetwork(train_data, train_labels, layers, options);
 
-% Evaluate the CNN's performance
+%% Evaluate the CNN's performance
 predicted_labels = classify(net, test_data);
 accuracy = sum(predicted_labels == test_labels) / numel(test_labels);
 disp(['Accuracy: ', num2str(accuracy)]);

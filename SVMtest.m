@@ -1,5 +1,5 @@
 close all;
-
+%% Imports profiles, change filepaths for sw5 vs sw20
 prof_all = [];
 rssis = [];
 load('data/data319_fft_fah1_sw20/ac_37_43_de_62_e7-157-20.mat'); 
@@ -15,15 +15,17 @@ threshold_value = 0.55;
 
 rssis = rssis - min(rssis);
 mean_rssi = mean(rssis);
-% Define the input size for the CNN
+
+% Define the input size 
 input_size = [360,240,1]; 
-[num_data, txt_data, raw_data] = xlsread("ylabel_fah_sw20.xlsx", 'SM20');
+[num_data, txt_data, raw_data] = xlsread("ylabel_fah_sw20.xlsx", 'SM5'); %update for sw
 labels = reshape(num_data,[],1);
 labels = labels(~isnan(labels));
 labels = labels >= 3;
 data_len = size(prof_all,1);
 threshold_value2 = 0.08;
-% Extract features from prof data
+
+%% Extract features from prof data
 features = [];
 average_values = [];
 for i = 1:data_len
@@ -94,7 +96,7 @@ end
 
 mean_arearatio = mean(features(:,1));
 features(:,1) = features(:,1) /mean_arearatio;
-% Split the data into training and testing sets (80% training, 20% testing)
+%% Split the data into training and testing sets (80% training, 20% testing)
 
 num_samples = size(features, 1);
 num_train_samples = round(0.8 * num_samples);
@@ -113,7 +115,7 @@ svm_model = fitcsvm(train_features, train_labels,"KernelFunction","rbf");
 % Predict labels for the testing set
 predicted_labels = predict(svm_model, test_features);
 
-% Evaluate the classifier's performance
+%% Evaluate the classifier's performance
 accuracy = sum(predicted_labels == test_labels) / length(test_labels);
 disp(['Accuracy: ', num2str(accuracy)]);
 

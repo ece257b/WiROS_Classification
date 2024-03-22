@@ -1,11 +1,21 @@
-# ECE257B_WiROS
+# Wireless Sensing Classification Project
 
-We have three method code in general:
+## Overview
+This repository contains MATLAB scripts for implementing three different methods for classifying wireless sensing data: SVM (Support Vector Machine), Simple Threshold, and CNN (Convolutional Neural Network). These scripts are part of a project aimed at analyzing Angle of Arrival (AoA) and Time of Flight (ToF) profiles obtained from wireless communication devices.
 
-- Simplethreshold represents the thresholding method for classifying.
-- SVMtest is our SVM model
-- CNN test is our CNN model. 
+## MATLAB Scripts
+- `SVMtest.m`: MATLAB script implementing the SVM classification method. Runtime: (insert)
+- `Simplethreshold.m`: MATLAB script implementing the Simple Threshold classification method. Runtime: (insert)
+- `CNNtest.m`: MATLAB script implementing the CNN classification method. Runtime: (insert)
+- `label_loop.m`: MATLAB script to view profile images 1 at a time
 
-- ylabel_fah_sw20.xlsx is our data label
+## Usage
+1. Clone the repository to your local machine.
+2. Open MATLAB and navigate to the directory containing the scripts.
+3. Run the desired script (`SVMtest.m`, `Simplethreshold.m`, or `CNNtest.m`) in MATLAB.
+4. Test other data by changing the imports in matlab
 
-You can try change the file direct in front of every file to load different data. Ignore other .m files, they are just for testing new ideas. 
+## Contributors
+- Kelvin Duong
+- Zihao Gong
+

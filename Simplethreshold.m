@@ -1,5 +1,6 @@
 close all;
 
+%% Imports profiles, change filepaths for sw5 vs sw20
 prof_all = [];
 rssis = [];
 load('data/data319_fft_fah1_sw20/ac_37_43_de_62_e7-157-20.mat'); 
@@ -15,7 +16,8 @@ threshold_value = 0.55;
 
 rssis = rssis - min(rssis);
 mean_rssi = mean(rssis);
-% Define the input size for the CNN
+
+% Define the input size
 input_size = [360,240,1]; 
 [num_data, txt_data, raw_data] = xlsread("ylabel_fah_sw20.xlsx", 'SM20');
 labels = reshape(num_data,[],1);
@@ -23,7 +25,8 @@ labels = labels(~isnan(labels));
 labels = labels >= 3;
 data_len = size(prof_all,1);
 threshold_value2 = 0.08;
-% Extract features from prof data
+
+%% Extract features from prof data
 area_ratios = [];
 for i = 46:50
     % Extract relevant features from the prof data
@@ -92,6 +95,7 @@ for i = 46:50
     imshow(significant_peaks, 'Colormap', hot); % Use 'hot' colormap
 end
 
+%% Calculates Accuracy
 mean_arearatio = mean(area_ratios);
 good_idx = find(area_ratios < mean_arearatio);
 predicted_labels = zeros(data_len,1);
