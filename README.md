@@ -1,4 +1,4 @@
-# Wireless Sensing Classification Project
+# Data Collection and Classification of Wireless Sensing for Robotics Applications
 
 ## Overview
 This repository contains MATLAB scripts for implementing three different methods for classifying wireless sensing data: SVM (Support Vector Machine), Simple Threshold, and CNN (Convolutional Neural Network). These scripts are part of a project aimed at analyzing Angle of Arrival (AoA) and Time of Flight (ToF) profiles obtained from wireless communication devices.
@@ -18,4 +18,9 @@ This repository contains MATLAB scripts for implementing three different methods
 ## Contributors
 - Kelvin Duong
 - Zihao Gong
+
+## Acknowledgements
+
+We would like to express our gratitude to Aditya Arun and William Hunter for their invaluable assistance and hardware resources provided during the course of this project.
+
 
